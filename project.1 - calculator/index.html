@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator prosty</title>
+    <title>Simple calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,40 +12,40 @@
     <div id="container">
         <div id="screen">
 
-            <p id="value">0</p>
+            <input type="text" placeholder="0" id="value" disabled>
 
         </div>
         <div id="form">
 
 
-            <button class="buttonTop">AC</button>
-            <button class="buttonTop">+/-</button>
-            <button class="buttonTop">%</button>
-            <button class="buttonRight">/</button>
+            <button class="buttonTop" onclick="clearScreen()">AC</button>
+            <button class="buttonTop" onclick="toogleSing()">+/-</button>
+            <button class="buttonTop" onclick="percentCalc()">&percnt;</button>
+            <button class="buttonRight">&divide;</button>
 
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="buttonRight">*</button>
+            <button onclick="appendToScreen('7')">7</button>
+            <button onclick="appendToScreen('8')">8</button>
+            <button onclick="appendToScreen('9')">9</button>
+            <button class="buttonRight">&times;</button>
 
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="buttonRight">-</button>
+            <button onclick="appendToScreen('4')">4</button>
+            <button onclick="appendToScreen('5')">5</button>
+            <button onclick="appendToScreen('6')">6</button>
+            <button class="buttonRight">&minus;</button>
 
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="buttonRight">+</button>
+            <button onclick="appendToScreen('1')">1</button>
+            <button onclick="appendToScreen('2')">2</button>
+            <button onclick="appendToScreen('3')">3</button>
+            <button class="buttonRight">&plus;</button>
 
-            <button id="button_0">0</button>
-            <button>,</button>
-            <button class="buttonRight">=</button>
+            <button id="button_0" onclick="appendToScreen('0')"">0</button>
+            <button onclick=" appendToScreen('.')">&dot;</button>
+            <button class="buttonRight">&equals;</button>
 
 
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="calculator.js"></script>
 </body>
 
 </html>

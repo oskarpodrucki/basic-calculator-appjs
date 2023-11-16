@@ -1,15 +1,16 @@
 body {
-    margin: 0px;
+    margin: 0;
     background-color: #666666;
 }
 
 #container {
     margin: auto;
     margin-top: 75px;
-    width: 400px;
-    height: 800px;
+    width: 405px;
+    height: 805px;
     border-radius: 75px;
     background-color: black;
+    border: 1px solid white;
 }
 
 #screen {
@@ -20,13 +21,20 @@ body {
 }
 
 #value {
+    width: 88.5%;
+    height: 475px;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
     color: white;
-    font-size: 100px;
-    margin-right: 25px;
-    position: absolute;
-    top: 160px;
-    margin-left: 318px;
+    font-size: 75px;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+}
 
+::placeholder {
+    color: white;
 }
 
 #form {
@@ -47,7 +55,7 @@ button {
     height: 80px;
     width: 80px;
     border-radius: 100px;
-    background-color: #444444;
+    background-color: #333333;
     border: none;
     font-size: 40px;
     cursor: pointer;
@@ -55,12 +63,12 @@ button {
 }
 
 .buttonTop {
-    background-color: #cccccc;
+    background-color: #a5a5a5;
     color: black;
 }
 
 .buttonTop:hover {
-    background-color: #999999;
+    background-color: #949494;
 }
 
 .buttonRight {
@@ -73,7 +81,7 @@ button {
 }
 
 button:hover:not(.buttonTop):not(.buttonRight) {
-    background-color: #333333;
+    background-color: #222222;
 }
 
 #button_0 {
