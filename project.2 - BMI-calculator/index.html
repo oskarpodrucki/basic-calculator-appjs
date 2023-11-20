@@ -15,24 +15,23 @@
 
         <div id="form">
 
-            <h1>Calculator BMI</h1>
-            <br /> 
+            <h1>Calculator</h1>
 
             <p>Age (in ages):</p>
-            <input type="number">
+            <input type="number" id="input_age">
 
             <p>Sex:</p>
-            <input type="radio" name="sex">Female</input>
-            <input type="radio" name="sex">Male</input>
+            <input type="radio" name="sex" value="1">Female</input>
+            <input type="radio" name="sex" value="2">Male</input>
 
             <p>Weight (in kg):</p>
-            <input type="number">
+            <input type="number" id="input_weight">
 
             <p>Height (in cm):</p>
-            <input type="number">
-            <br /> <br /> <br /> <br />
+            <input type="number" id="input_height">
+            <br /> <br /> <br />
 
-            <button type="submit">Calculate your BMI</button>
+            <button type="submit" id="submit" onclick="calcBMI()">Calculate your BMI</button>
 
         </div>
 
@@ -40,12 +39,12 @@
         <div id="info">
 
             <h1>What is BMI?</h1>
-            
+
             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
-               sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
-               quam officia explicabo atque?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
+                sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
+                quam officia explicabo atque?
             </p>
 
             <p>
@@ -53,14 +52,14 @@
                 Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
                 sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
                 quam officia explicabo atque?
-             </p>
+            </p>
 
             <h1>How to calculate BMI?</h1>
             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
-               sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
-               quam officia explicabo atque?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
+                sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
+                quam officia explicabo atque?
             </p>
 
         </div>
