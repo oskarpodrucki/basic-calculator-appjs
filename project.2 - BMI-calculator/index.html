@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator-bmi</title>
+    <title>Calculator BMI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,55 +12,70 @@
 
     <div id="container">
 
-
         <div id="form">
 
-            <h1>Calculator</h1>
+            <div class="div-form">
+                <h1 class="h1-form">Calculator <span>BMI</span></h1>
+            </div>
 
-            <p>Age (in ages):</p>
-            <input type="number" id="input_age">
+            <div class="div-form">
+                <p class="align-left">Age (in years):</p>
+                <input type="number" id="input_age" class="input-form">
+            </div>
 
-            <p>Sex:</p>
-            <input type="radio" name="sex" value="1">Female</input>
-            <input type="radio" name="sex" value="2">Male</input>
+            <div class="div-form">
+                <p class="align-left">Sex:</p>
+                <label>
+                    <input type="radio" name="sex" value="1"> Female
+                    <input type="radio" name="sex" value="2"> Male
+                </label>
+            </div>
 
-            <p>Weight (in kg):</p>
-            <input type="number" id="input_weight">
+            <div class="div-form">
+                <p class="align-left">Weight (in kg):</p>
+                <input type="number" id="input_weight" class="input-form">
+            </div>
 
-            <p>Height (in cm):</p>
-            <input type="number" id="input_height">
-            <br /> <br /> <br />
+            <div class="div-form">
+                <p class="align-left">Height (in cm):</p>
+                <input type="number" id="input_height" class="input-form">
+            </div>
 
-            <button type="submit" id="submit" onclick="calcBMI()">Calculate your BMI</button>
+            <br /><br /><br />
+
+            <div class="div-form">
+                <button type="submit" id="submit" onclick="calcBMI()">Calculate your BMI</button>
+            </div>
 
         </div>
 
-
         <div id="info">
 
-            <h1>What is BMI?</h1>
+            <div class="div-info">
+                <h1 class="h1-info">What is <span>BMI</span>?</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
+                    sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
+                    quam officia explicabo atque?
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
+                    sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
+                    quam officia explicabo atque?
+                </p>
+            </div>
 
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
-                sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
-                quam officia explicabo atque?
-            </p>
-
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
-                sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
-                quam officia explicabo atque?
-            </p>
-
-            <h1>How to calculate BMI?</h1>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
-                sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
-                quam officia explicabo atque?
-            </p>
+            <div class="div-info">
+                <h1 class="h1-info">How to calculate <span>BMI</span>?</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Optio odio quae nihil voluptas tempore quibusdam quia aspernatur
+                    sint laudantium rerum ipsa, beatae mollitia suscipit unde dolorem
+                    quam officia explicabo atque?
+                </p>
+            </div>
 
         </div>
 
