@@ -49,10 +49,10 @@ body {
 }
 
 label {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     margin-bottom: 10px;
     margin-left: 25px;
+    float: left;
 }
 
 input[type="radio"] {
