@@ -6,34 +6,66 @@ function getData() {
 
     switch (true) {
         case age === "" || isNaN(age) || age < 1 || age > 99:
-            alert("Podaj poprawny wiek.");
+            alert("Please enter a valid age.");
             return;
         case sex === null:
-            alert("Wybierz płeć.");
+            alert("Select gender.");
             return;
         case weight === "" || isNaN(weight) || weight < 20 || weight > 150:
-            alert("Podaj poprawną wagę.");
+            alert("Please enter a valid weight.");
             return;
         case height === "" || isNaN(height) || height < 100 || height > 250:
-            alert("Podaj poprawny wzrost.");
+            alert("Please enter a valid height.");
             return;
         default:
-            alert("Wszystkie dane poprawne")
-            console.log("Wiek:", age);
-            console.log("Płeć:", sex.value);
-            console.log("Waga:", weight);
-            console.log("Wzrost:", height);
+            alert("All data entered correctly.")
+            console.log("------------------------------------------")
 
-            calcBMI();
+            console.log("Age:", age);
+            console.log("Gender:", sex.value);
+            console.log("Weight:", weight);
+            console.log("Height:", height);
+
+            calcBMI(age, sex, weight, height);
     }
 }
 
-function calcBMI(){
+function calcBMI(age, sex, weight, height) {
+    console.log("------------------------------------------")
 
-    // Pobierz element o identyfikatorze "container"
     var container = document.getElementById("container");
-
-    // Usuń zawartość elementu
     container.innerHTML = "";
 
+    console.log("Age:", age);
+    console.log("Gender:", sex.value);
+    console.log("Weight:", weight);
+    console.log("Height:", height);
+
+    console.log("------------------------------------------")
+
+    var newHeight = height / 100;
+    console.log(newHeight)
+
+    var BMI = weight / (newHeight * newHeight)
+    BMI = BMI.toFixed(2)
+    console.log(BMI)
+
+    makeDiv(age, sex, weight, height, BMI)
+
+    console.log("------------------------------------------")
+
+    const div = document.createElement("div")
+
+    const div_top = document.createElement("div")
+    const div_top_1 = document.createElement("div")
+    const div_top_2 = document.createElement("div")
+    const div_top_3 = document.createElement("div")
+
+    const div_bottom = document.createElement("div")
+    const div_bottom_1 = document.createElement("div")
+    const div_bottom_2 = document.createElement("div")
+    const div_bottom_3= document.createElement("div")
+    const div_bottom_4 = document.createElement("div")
+
 }
+
