@@ -23,5 +23,17 @@ function getData() {
             console.log("Płeć:", sex.value);
             console.log("Waga:", weight);
             console.log("Wzrost:", height);
+
+            calcBMI();
     }
+}
+
+function calcBMI(){
+
+    // Pobierz element o identyfikatorze "container"
+    var container = document.getElementById("container");
+
+    // Usuń zawartość elementu
+    container.innerHTML = "";
+
 }
