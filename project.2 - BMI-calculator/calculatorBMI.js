@@ -53,19 +53,72 @@ function calcBMI(age, sex, weight, height) {
     makeDiv(age, sex, weight, height, BMI)
 
     console.log("------------------------------------------")
-
-    const div = document.createElement("div")
-
-    const div_top = document.createElement("div")
-    const div_top_1 = document.createElement("div")
-    const div_top_2 = document.createElement("div")
-    const div_top_3 = document.createElement("div")
-
-    const div_bottom = document.createElement("div")
-    const div_bottom_1 = document.createElement("div")
-    const div_bottom_2 = document.createElement("div")
-    const div_bottom_3= document.createElement("div")
-    const div_bottom_4 = document.createElement("div")
-
 }
 
+
+function makeDiv(age, sex, weight, height, BMI){
+
+    var divBMI = document.createElement("div");
+    divBMI.id = "div_BMI";
+
+    var divTop = document.createElement("div");
+    divTop.id = "div_BMI_top";
+
+    var divTopRight = document.createElement("div");
+    divTopRight.id = "div_BMI_top_right";
+
+    var divTop1 = document.createElement("div");
+    divTop1.id = "div_BMI_top_1";
+    divTop1.innerHTML = "<h1>Your BMI Result</h1>";
+
+    var divTop2 = document.createElement("div");
+    divTop2.id = "div_BMI_top_2";
+    divTop2.innerHTML = `<p>Your result indicates:</p><h3>${BMI}</h3>`;
+
+    var divTopLeft = document.createElement("div");
+    divTopLeft.id = "div_BMI_top_left";
+
+    var divTop3 = document.createElement("div");
+    divTop3.id = "div_BMI_top_3";
+    divTop3.innerHTML = `<h1>${BMI}</h1>`;
+
+    var divBottom = document.createElement("div");
+    divBottom.id = "div_BMI_bottom";
+
+    var divGender = document.createElement("div");
+    divGender.className = "align_left";
+    divGender.innerHTML = `<p>Gender</p><h3>${sex}</h3>`;
+
+    var divWeight = document.createElement("div");
+    divWeight.className = "align_left";
+    divWeight.innerHTML = `<p>Weight</p><h3>${weight}</h3>`;
+
+    var divHeight = document.createElement("div");
+    divHeight.className = "align_left";
+    divHeight.innerHTML = `<p>Height</p><h3>${height}</h3>`;
+
+    var divHealthyWeight = document.createElement("div");
+    divHealthyWeight.className = "align_left";
+    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3>${sex}</h3>`;
+
+    divTopRight.appendChild(divTop1);
+    divTopRight.appendChild(divTop2);
+
+    divTopLeft.appendChild(divTop3);
+
+    divTop.appendChild(divTopRight);
+    divTop.appendChild(divTopLeft);
+
+    divBottom.appendChild(divGender);
+    divBottom.appendChild(divWeight);
+    divBottom.appendChild(divHeight);
+    divBottom.appendChild(divHealthyWeight);
+
+    divBMI.appendChild(divTop);
+    divBMI.appendChild(divBottom);
+
+    // Dodawanie do istniejącego div container
+    var container = document.getElementById("container");
+    container.appendChild(divBMI);
+
+}
