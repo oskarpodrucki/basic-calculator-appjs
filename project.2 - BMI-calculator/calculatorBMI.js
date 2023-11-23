@@ -50,14 +50,14 @@ function calcBMI(age, sex, weight, height) {
     BMI = BMI.toFixed(2)
     console.log(BMI)
 
+    console.log("------------------------------------------")
+
     makeDiv(age, sex, weight, height, BMI)
 
     console.log("------------------------------------------")
 }
 
-
-function makeDiv(age, sex, weight, height, BMI){
-
+function makeDiv(age, sex, weight, height, BMI) {
     var divBMI = document.createElement("div");
     divBMI.id = "div_BMI";
 
@@ -87,7 +87,7 @@ function makeDiv(age, sex, weight, height, BMI){
 
     var divGender = document.createElement("div");
     divGender.className = "align_left";
-    divGender.innerHTML = `<p>Gender</p><h3>${sex}</h3>`;
+    divGender.innerHTML = `<p>Gender</p><h3>${sex.value}</h3>`;
 
     var divWeight = document.createElement("div");
     divWeight.className = "align_left";
@@ -99,7 +99,7 @@ function makeDiv(age, sex, weight, height, BMI){
 
     var divHealthyWeight = document.createElement("div");
     divHealthyWeight.className = "align_left";
-    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3>${sex}</h3>`;
+    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3>${sex.value}</h3>`;
 
     divTopRight.appendChild(divTop1);
     divTopRight.appendChild(divTop2);
@@ -117,8 +117,9 @@ function makeDiv(age, sex, weight, height, BMI){
     divBMI.appendChild(divTop);
     divBMI.appendChild(divBottom);
 
-    // Dodawanie do istniejącego div container
+    // Adding to the existing container div
     var container = document.getElementById("container");
     container.appendChild(divBMI);
 
+    console.log("Div created!")
 }
