@@ -52,7 +52,7 @@ function calcBMI(age, sex, weight, height) {
 
     console.log("------------------------------------------")
 
-    makeDiv(age, sex, weight, height, BMI)
+    makeDiv(age, sex, weight, height, BMI);
 
     console.log("------------------------------------------")
 }
@@ -74,38 +74,36 @@ function makeDiv(age, sex, weight, height, BMI) {
     var divTop2 = document.createElement("div");
     divTop2.id = "div_BMI_top_2";
 
-
     let result;
 
     switch (true) {
         case BMI < 16:
-            result = "wygłodzenie";
+            result = "Underweight";
             break;
         case BMI >= 16 && BMI <= 16.9:
-            result = "wychudzenie";
+            result = "Severely underweight";
             break;
         case BMI >= 17 && BMI <= 18.5:
-            result = "niedowaga";
+            result = "Underweight";
             break;
         case BMI >= 18.5 && BMI <= 24.9:
-            result = "waga prawidłowa";
+            result = "Normal weight";
             break;
         case BMI >= 25 && BMI <= 29.9:
-            result = "nadwaga";
+            result = "Overweight";
             break;
         case BMI >= 30 && BMI <= 34.9:
-            result = "otyłość I stopnia";
+            result = "Obesity Class I";
             break;
         case BMI >= 35 && BMI <= 39.9:
-            result = "otyłość II stopnia";
+            result = "Obesity Class II";
             break;
         case BMI >= 40:
-            result = "otyłość III stopnia";
+            result = "Obesity Class III";
             break;
         default:
-            result = "Nieprawidłowy zakres BMI";
+            result = "Invalid BMI range";
     }
-
 
     console.log(result);
 
@@ -130,19 +128,18 @@ function makeDiv(age, sex, weight, height, BMI) {
     } else {
         gender = "Man"
     }
-    divGender.innerHTML = `<p>Gender</p><h3>${gender}</h3>`;
+    divGender.innerHTML = `<p>Gender</p><h3 class="blue">${gender}</h3>`;
 
     var divWeight = document.createElement("div");
-    divWeight.className = "align_left";
-    divWeight.innerHTML = `<p>Weight</p><h3>${weight}</h3>`;
+    divWeight.className = "align_left_border";
+    divWeight.innerHTML = `<p>Weight</p><h3 class="blue">${weight}</h3>`;
 
     var divHeight = document.createElement("div");
-    divHeight.className = "align_left";
-    divHeight.innerHTML = `<p>Height</p><h3>${height}</h3>`;
+    divHeight.className = "align_left_border";
+    divHeight.innerHTML = `<p>Height</p><h3 class="blue">${height}</h3>`;
 
     var divHealthyWeight = document.createElement("div");
-    divHealthyWeight.className = "align_left";
-
+    divHealthyWeight.className = "align_left_border";
 
     var weight1 = 18.5 * (height * height);
     var fixedWeight1 = Math.floor(weight1).toString().slice(0, 2);
@@ -152,8 +149,7 @@ function makeDiv(age, sex, weight, height, BMI) {
     var fixedWeight2 = Math.floor(weight2).toString().slice(0, 2);
     console.log(fixedWeight2);
 
-
-    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3>${fixedWeight1} --- ${fixedWeight2} Kg</h3>`;
+    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3 class="blue">${fixedWeight1} - ${fixedWeight2} Kg</h3>`;
 
     divTopRight.appendChild(divTop1);
     divTopRight.appendChild(divTop2);
