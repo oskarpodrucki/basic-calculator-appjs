@@ -73,7 +73,43 @@ function makeDiv(age, sex, weight, height, BMI) {
 
     var divTop2 = document.createElement("div");
     divTop2.id = "div_BMI_top_2";
-    divTop2.innerHTML = `<p>Your result indicates:</p><h3>${BMI}</h3>`;
+
+
+    let result;
+
+    switch (true) {
+        case BMI < 16:
+            result = "wygłodzenie";
+            break;
+        case BMI >= 16 && BMI <= 16.9:
+            result = "wychudzenie";
+            break;
+        case BMI >= 17 && BMI <= 18.5:
+            result = "niedowaga";
+            break;
+        case BMI >= 18.5 && BMI <= 24.9:
+            result = "waga prawidłowa";
+            break;
+        case BMI >= 25 && BMI <= 29.9:
+            result = "nadwaga";
+            break;
+        case BMI >= 30 && BMI <= 34.9:
+            result = "otyłość I stopnia";
+            break;
+        case BMI >= 35 && BMI <= 39.9:
+            result = "otyłość II stopnia";
+            break;
+        case BMI >= 40:
+            result = "otyłość III stopnia";
+            break;
+        default:
+            result = "Nieprawidłowy zakres BMI";
+    }
+
+
+    console.log(result);
+
+    divTop2.innerHTML = `<p>Your result indicates:</p><h3>${result}</h3>`;
 
     var divTopLeft = document.createElement("div");
     divTopLeft.id = "div_BMI_top_left";
@@ -87,7 +123,14 @@ function makeDiv(age, sex, weight, height, BMI) {
 
     var divGender = document.createElement("div");
     divGender.className = "align_left";
-    divGender.innerHTML = `<p>Gender</p><h3>${sex.value}</h3>`;
+
+    let gender;
+    if (sex.value == 1) {
+        gender = "Woman"
+    } else {
+        gender = "Man"
+    }
+    divGender.innerHTML = `<p>Gender</p><h3>${gender}</h3>`;
 
     var divWeight = document.createElement("div");
     divWeight.className = "align_left";
@@ -99,7 +142,18 @@ function makeDiv(age, sex, weight, height, BMI) {
 
     var divHealthyWeight = document.createElement("div");
     divHealthyWeight.className = "align_left";
-    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3>${sex.value}</h3>`;
+
+
+    var weight1 = 18.5 * (height * height);
+    var fixedWeight1 = Math.floor(weight1).toString().slice(0, 2);
+    console.log(fixedWeight1);
+
+    var weight2 = 24.9 * (height * height);
+    var fixedWeight2 = Math.floor(weight2).toString().slice(0, 2);
+    console.log(fixedWeight2);
+
+
+    divHealthyWeight.innerHTML = `<p>Healthy Weight:</p><h3>${fixedWeight1} --- ${fixedWeight2} Kg</h3>`;
 
     divTopRight.appendChild(divTop1);
     divTopRight.appendChild(divTop2);
@@ -117,7 +171,6 @@ function makeDiv(age, sex, weight, height, BMI) {
     divBMI.appendChild(divTop);
     divBMI.appendChild(divBottom);
 
-    // Adding to the existing container div
     var container = document.getElementById("container");
     container.appendChild(divBMI);
 
